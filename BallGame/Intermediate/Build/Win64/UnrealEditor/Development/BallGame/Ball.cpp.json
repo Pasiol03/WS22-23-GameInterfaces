@@ -1,0 +1,15 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\barba\\documents\\unreal projects\\ballgame\\source\\ballgame\\private\\ball.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\barba\\documents\\unreal projects\\ballgame\\intermediate\\build\\win64\\ballgameeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\users\\barba\\documents\\unreal projects\\ballgame\\intermediate\\build\\win64\\unrealeditor\\development\\ballgame\\definitions.ballgame.h",
+            "c:\\users\\barba\\documents\\unreal projects\\ballgame\\source\\ballgame\\public\\ball.h",
+            "c:\\users\\barba\\documents\\unreal projects\\ballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\ballgame\\ball.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

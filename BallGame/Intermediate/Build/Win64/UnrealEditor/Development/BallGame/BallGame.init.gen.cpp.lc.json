@@ -1,0 +1,13 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\barba\\documents\\unreal projects\\ballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\ballgame\\ballgame.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\barba\\documents\\unreal projects\\ballgame\\intermediate\\build\\win64\\ballgameeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\users\\barba\\documents\\unreal projects\\ballgame\\intermediate\\build\\win64\\unrealeditor\\development\\ballgame\\definitions.ballgame.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

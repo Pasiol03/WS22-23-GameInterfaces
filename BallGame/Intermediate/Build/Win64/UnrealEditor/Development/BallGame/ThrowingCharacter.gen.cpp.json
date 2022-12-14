@@ -1,0 +1,21 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\barba\\documents\\unreal projects\\ballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\ballgame\\throwingcharacter.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\barba\\documents\\unreal projects\\ballgame\\intermediate\\build\\win64\\ballgameeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\users\\barba\\documents\\unreal projects\\ballgame\\intermediate\\build\\win64\\unrealeditor\\development\\ballgame\\definitions.ballgame.h",
+            "c:\\users\\barba\\documents\\unreal projects\\ballgame\\source\\ballgame\\public\\throwingcharacter.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\charactermovementreplication.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\rootmotionsource.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\character.generated.h",
+            "c:\\users\\barba\\documents\\unreal projects\\ballgame\\intermediate\\build\\win64\\unrealeditor\\inc\\ballgame\\throwingcharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
