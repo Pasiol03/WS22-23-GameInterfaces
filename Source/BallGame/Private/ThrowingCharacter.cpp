@@ -20,6 +20,8 @@ void AThrowingCharacter::BeginPlay()
 
 	Billboard = this->FindComponentByClass<UBillboardComponent>();
 	PhysicsHandle = this->FindComponentByClass<UPhysicsHandleComponent>();
+
+	SpawnAndGrabBall();
 }
 
 void AThrowingCharacter::Tick(float DeltaTime)
@@ -113,6 +115,11 @@ void AThrowingCharacter::ShootBall()
 	// Apply an impulse to the ball so it is thrown away by the physics system
 	BallMesh->AddImpulse(GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetActorForwardVector() * ShootingStrength);
 	
+	// Fire on Ball shot
+	OnBallShot.Broadcast();
+
+	Ball->bWasShot = true;
+
 	// Ball variable now stores nullptr because we are not holding the ball anymore
 	Ball = nullptr;
 	
