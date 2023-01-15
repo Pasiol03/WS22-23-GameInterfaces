@@ -16,8 +16,8 @@ FString FMovingCubeInformation::ToCSVLine()
 	Line.Append(FString::Printf(TEXT("%.2f,"), Velocity.Z));
 	Line.Append(FString::Printf(TEXT("%.2f,"), InitialDistanceToPlayer));
 	Line.Append(FString::Printf(TEXT("%.2f,"), ShotDistanceToPlayer));
-	Line.Append(FString::FromInt(NumFailedAttempts) + ", "); 
-	Line.Append(FString::Printf(TEXT("%.1f,0\n"), TimeUntilShot));
+	Line.Append(FString::FromInt(NumFailedAttempts) + ","); 
+	Line.Append(FString::Printf(TEXT("%.1f\n"), TimeUntilShot));
 	
 	return Line; 
 }
@@ -34,6 +34,7 @@ void UStatisticsSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
 
+	SessionID = "";
 	FilePath = "C:\\BallGameStatistics\\";
 	Content.Empty();
 }
@@ -47,10 +48,10 @@ void UStatisticsSubsystem::CacheCubeInfo(FMovingCubeInformation& CubeInfo)
 	Content.Append(CubeInfo.ToCSVLine());
 }
 
-void UStatisticsSubsystem::WriteCachedCubeInfo(FString& ID)
+void UStatisticsSubsystem::WriteCachedCubeInfo()
 {
 	FString FileName = "CubeInformation_";
-	FileName.Append(ID);
+	FileName.Append(SessionID);
 	FileName.Append(".csv");
 	FString Path = FilePath + FileName;
 	
@@ -70,4 +71,9 @@ void UStatisticsSubsystem::WriteCachedCubeInfo(FString& ID)
 void UStatisticsSubsystem::SetFilePath(FString Path)
 {
 	FilePath = Path;
+}
+
+void UStatisticsSubsystem::SetID(FString ID)
+{
+	SessionID = ID;
 }

@@ -56,21 +56,28 @@ class BALLGAME_API UStatisticsSubsystem : public UGameInstanceSubsystem
 	
 	/** Creates new file with given ID and writes all stored cube information to it. */
 	UFUNCTION(BlueprintCallable)
-	void WriteCachedCubeInfo(UPARAM(ref) FString& ID);
+	void WriteCachedCubeInfo();
 
 	/** Caches cube data so it can be written later when finished. */
 	UFUNCTION(BlueprintCallable)
 	void CacheCubeInfo(UPARAM(ref) FMovingCubeInformation& CubeInfo); 
 
 	/** Sets the filepath where the statistics file is stored. */
-	UFUNCTION(BlueprintSetter)
+	UFUNCTION(BlueprintCallable)
 	void SetFilePath(FString Path);
 
+	/** Sets the ID that will be used to generate a filename. */
+	UFUNCTION(BlueprintCallable)
+	void SetID(FString ID);
+	
 	/** The filepath for the CSV file we want to store. */
 	FString FilePath;
 
 	/** Stores the content that will be written to the file. */
-	FString Content; 
+	FString Content;
+
+	/** The ID of the current session. */
+	FString SessionID;
 };
 
 
