@@ -69,6 +69,14 @@ class BALLGAME_API UStatisticsSubsystem : public UGameInstanceSubsystem
 	/** Sets the ID that will be used to generate a filename. */
 	UFUNCTION(BlueprintCallable)
 	void SetID(FString ID);
+
+	/** Sets Movement method for generating filename. */
+	UFUNCTION(BlueprintCallable)
+	void SetMovement(bool useTeleport);
+
+	/** Sets input for generating filename. */
+	UFUNCTION(BlueprintCallable)
+	void SetInput(bool useGamepad);
 	
 	/** The filepath for the CSV file we want to store. */
 	FString FilePath;
@@ -78,6 +86,12 @@ class BALLGAME_API UStatisticsSubsystem : public UGameInstanceSubsystem
 
 	/** The ID of the current session. */
 	FString SessionID;
+
+	/** teleport or walk */
+	FString Movement;
+
+	/** gamepad or mouse */
+	FString Input;
 };
 
 

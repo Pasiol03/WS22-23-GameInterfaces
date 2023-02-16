@@ -35,6 +35,8 @@ void UStatisticsSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 	Super::Initialize(Collection);
 
 	SessionID = "";
+	Movement = "";
+	Input = "";
 	FilePath = "C:\\BallGameStatistics\\";
 	Content.Empty();
 }
@@ -51,6 +53,8 @@ void UStatisticsSubsystem::CacheCubeInfo(FMovingCubeInformation& CubeInfo)
 void UStatisticsSubsystem::WriteCachedCubeInfo()
 {
 	FString FileName = "CubeInformation_";
+	FileName.Append(Movement + "_");
+	FileName.Append(Input + "_");
 	FileName.Append(SessionID);
 	FileName.Append(".csv");
 	FString Path = FilePath + FileName;
@@ -77,3 +81,29 @@ void UStatisticsSubsystem::SetID(FString ID)
 {
 	SessionID = ID;
 }
+
+void UStatisticsSubsystem::SetMovement(bool useTeleport)
+{
+	if (useTeleport)
+	{
+		Movement = "tel";
+	}
+	else
+	{
+		Movement = "walk";
+	}
+}
+
+void UStatisticsSubsystem::SetInput(bool useGamepad)
+{
+	if (useGamepad)
+	{
+		Input = "gamepad";
+	}
+	else
+	{
+		Input = "mouse";
+	}
+}
+
+
